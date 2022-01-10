@@ -1,0 +1,27 @@
+package com.bingo.container;
+
+import java.awt.event.ActionEvent;
+
+import javax.swing.*;
+
+import com.bingo.common.ConstantConfig;
+import com.bingo.common.JRadioBtnAdapter;
+
+public class RadioDecryBtn extends JRadioBtnAdapter {
+
+    @Override
+    public JRadioButton buildRadioBtn() {
+        JRadioButton radioButton = new JRadioButton(ConstantConfig.BTN_RADIO_NAME_DECRY);
+
+        radioButton.setActionCommand(ConstantConfig.BTN_RADIO_ACTION_COMMAND_DECRY);
+
+        radioButton.addActionListener(this);
+
+        return radioButton;
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent event) {
+    }
+}
+     
